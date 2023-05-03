@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/blog.css"
+import "../components/blog.css"
 import videoImg from '../images/video.png'
 import articleImg from '../images/article.png'
 import caseStudy from '../images/case-study.png'
