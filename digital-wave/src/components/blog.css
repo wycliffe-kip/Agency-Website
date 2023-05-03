@@ -1,65 +1,58 @@
-import React from "react";
-import "../styles/blog.css"
-import videoImg from '../images/video.png'
-import articleImg from '../images/article.png'
-import caseStudy from '../images/case-study.png'
-
-const blogData = [
-    {
-        imgUrl: videoImg, 
-        title: 'Video',
-        desc: 'To know about work. Watch some video f...',
-        linkUrl: '#'
-    },
-        {
-        imgUrl: articleImg, 
-        title: 'Article',
-        desc: "Do you want to improve the way your brand interacts with customers? Let's talk....",
-        linkUrl: '#'
-    },
-        {
-        imgUrl: caseStudy, 
-        title: 'Case Study',
-        desc: 'Boost your conversation with us....',
-        linkUrl: '#'
-    },
-    
-]
-
-const Blog = () => {
-    return (
-        <section>
-            <div className="container">
-                <div className="blog_top-content">
-                    <h6 className="subtitle">Our Blog</h6>
-                    <h2> Let's have a look from 
-                        <span className="highlight"> Recent blog</span>
-                    </h2>
-                </div>
-
-                <div className="blog_wrapper">
-                   {
-                    blogData.map((item, index) => (
-                        <div className="blog_item" key={index}>
-                        <h3>{item.title}</h3>
-                        <div className="blog_img">
-                            <img src={item.imgUrl} alt="" />
-                        </div>
-                        <p className="description blog_desc">
-                            {item.desc}
-                        </p>
-                        <div>
-                            <a href={item.linkUrl} className="learn_more">
-                                <i class="ri-arrow-right-line"></i>
-                            </a>
-                        </div>
-                    </div>
-                    ))
-                   }
-                </div>
-            </div>
-
-        </section>
-    )
+.blog_top-content {
+    text-align: center;
+    margin-bottom: 100px;
 }
-export default Blog
+
+.blog_item {
+    width: 30%;
+    padding: 30px 25px;
+    background: var(--card-bg);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.blog_item h3{
+    color: whitesmoke;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.blog_img{
+    margin-bottom: 30px;
+}
+
+.blog_img img {
+    width: 100%;
+}
+
+.blog_desc {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.learn_more i {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.blog_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blog_item:nth-child(2) .blog_img{
+    margin-top: -100px;
+    margin-bottom: -10px;
+}
+
+.blog_item:nth-child(2) {
+    width: 33%;
+    margin-top: -70px;
+}
+
+.description {
+    color: aliceblue;
+}
