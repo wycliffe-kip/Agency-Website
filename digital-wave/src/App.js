@@ -1,9 +1,12 @@
 
 import './App.css';
+import Team from './components/Team';
 
 function App() {
   return (
-    <div></div>
+    <>
+      <Team /> 
+    </>
   );
 }
 
